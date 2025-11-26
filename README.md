@@ -1,6 +1,6 @@
 # properties-manager-js
 
-A professional, type-safe **configuration manager for Node + TypeScript**.
+A library to manage env configurations in js proyects **configuration manager for Node + TypeScript**.
 
 ✔ Scoped environment files (`.env`, `.env.dev`, `.env.prod`, etc.)  
 ✔ Strongly typed getters (`getString`, `getNumber`, `getBoolean`, `getJSON`)  
