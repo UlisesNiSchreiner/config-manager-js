@@ -1,5 +1,3 @@
-// src/configManager.ts
-
 import { parseEnvFile, resolveEnvPath } from "./envParser";
 import type { ConfigManagerOptions, GetOptions } from "./types";
 

@@ -1,4 +1,3 @@
-// test/configManager.test.ts
 import { describe, it, expect, beforeAll, beforeEach } from "vitest";
 import fs from "node:fs";
 import path from "node:path";

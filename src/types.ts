@@ -1,5 +1,3 @@
-// src/types.ts
-
 export interface ConfigManagerOptions {
   /**
    * Base directory where .env files are located.
