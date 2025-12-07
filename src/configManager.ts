@@ -41,12 +41,10 @@ export class ConfigManager {
   private readonly cache = new Map<ScopeName, ScopeCache>();
 
   private constructor(options: ConfigManagerOptions = {}) {
-    // Por defecto, usamos ./config como directorio raíz
     this.configDir = options.configDir ?? path.resolve(process.cwd(), "config");
     this.defaultScope = options.defaultScope ?? "dev";
     this.envPrefix = options.envPrefix;
     this.strict = options.strict ?? true;
-    // Por defecto, buscamos SCOPE como variable de entorno
     this.scopeEnvVarName = options.scopeEnvVarName ?? "SCOPE";
   }
 
@@ -134,30 +132,25 @@ export class ConfigManager {
    * Raw resolution without type parsing.
    */
   private resolveRawValue(key: string, scope?: string): string | undefined {
-    // 1. process.env with prefix
     if (this.envPrefix) {
       const prefixed = process.env[`${this.envPrefix}${key}`];
       if (prefixed !== undefined) return prefixed;
     }
 
-    // 2. process.env without prefix
     if (process.env[key] !== undefined) {
       return process.env[key];
     }
 
-    // 3. current scope file
     if (scope !== undefined) {
       const scoped = this.ensureScopeLoaded(scope);
       if (scoped[key] !== undefined) return scoped[key];
     }
 
-    // 4. fallback to defaultScope file (if different)
     if (this.defaultScope && this.defaultScope !== scope) {
       const def = this.ensureScopeLoaded(this.defaultScope);
       if (def[key] !== undefined) return def[key];
     }
 
-    // 5. no root file; si no está, devolvemos undefined
     return undefined;
   }
 

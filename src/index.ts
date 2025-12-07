@@ -2,6 +2,8 @@ import { ConfigManager } from "./configManager";
 
 export * from "./types";
 
+// We are not expoting the class up to now. We are just exporting the instance
+
 /**
  * Default singleton instance.
  *
