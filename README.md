@@ -7,7 +7,7 @@ and strongly-typed access with predictable resolution rules.
 It provides a clean alternative to accessing `process.env` directly,
 enforcing structure, validation and consistency across environments.
 
-![lib architecture](docs/config-manager-js%20architecture.png)
+![lib architecture](assets/config-manager-js%20architecture.png)
 
 ### Key features
 
