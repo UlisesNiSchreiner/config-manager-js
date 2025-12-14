@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/UlisesNiSchreiner/config-manager-js/compare/v2.0.0...v2.0.1) (2025-12-13)
+
+### Features
+
+- add image to readme - 01 ([714b7bd](https://github.com/UlisesNiSchreiner/config-manager-js/commit/714b7bd4fb63df1dd86147945f181360a047cfa7))
+- add image to readme - 02 ([0fbf77a](https://github.com/UlisesNiSchreiner/config-manager-js/commit/0fbf77a61e0299edecc12868c97a26d0b71459f5))
+
 ## [2.0.0](https://github.com/UlisesNiSchreiner/config-manager-js/compare/v0.0.3-rc.0...v2.0.0) (2025-11-30)
 
 ### Features
